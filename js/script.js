@@ -25,12 +25,12 @@ console.log(ticketPrice);
 // SCONTO 20% minorenni
 // SCONTO 40% over 65
 
-if (userAge <= 18){
+if (userAge <= 18) {
   let calcScountUnder = ((ticketPrice * 20) / 100 );
   let ticketUnder = ticketPrice - calcScountUnder;
-  document.getElementById('price').innerHTML = ('€ ') + ticketUnder.toFixed(2);
   console.log(ticketUnder);
-} else if (userAge >= 65){
+} 
+else if (userAge >= 65) {
   let calcScountOver = ((ticketPrice * 40) / 100 );
   let ticketOver = ticketPrice - calcScountOver;
   console.log(ticketOver);
