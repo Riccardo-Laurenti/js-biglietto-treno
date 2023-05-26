@@ -1,28 +1,36 @@
-/*   Stampo a schermo*/
-console.log('JS OK!');
+
+/* Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
+Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
+- il prezzo del biglietto è definito in base ai km (0.21 € al km)
+- va applicato uno sconto del 20% per i minorenni
+- va applicato uno sconto del 40% per gli over 65. */
 
 
-/*   Recupero elemento dal DOM */
 
-const recElement = document.getElementById('target-train');
+// Quanti chilometri vuoi percorrere?
+let userKm = parseInt(prompt('Quanto è lungo il tuo viaggio in km?'));
+console.log(userKm);
 
+// Età del passeggero?
+let userAge = parseInt(prompt('Quanti anni hai?'));
+console.log(userAge);
 
-/*   Il programma dovrà chiedere all'utente :
-     - il numero di chilometri che vuole percorrere 
-     - e l'età del passeggero.  */
+// Prezzo totale del viaggio per persone tra i 19 e 64 anni
+// 0.21€ al km
 
+let ticketPrice = userKm * 0.21;
+console.log(ticketPrice);
 
-const userKm = parseInt(prompt("Inserisco i km da percorrere", 20));
+// APPLICO SCONTO
+// SCONTO 20% minorenni
+// SCONTO 40% over 65
 
-const userAge = parseInt(prompt ("Inserisco l'età dell'utente", 28));
-
-
-console.log('KM da percorrere', userKm, typeof userKm);
-console.log('Età utente', userAge, typeof userAge);
-
-
-/*   Sulla base di queste informazioni dovrai calcolare il prezzo totale del viaggio, secondo queste regole:
-
-     - il prezzo del biglietto è definito in base ai km (0.21 € al km)
-     - va applicato uno sconto del 20% per i minorenni
-     -  va applicato uno sconto del 40% per gli over 65.*/
+if (userAge <= 18){
+  let calcScountUnder = ((ticketPrice * 20) / 100 );
+  let ticketUnder = ticketPrice - calcScountUnder;
+  console.log(ticketUnder);
+} else if (userAge >= 65){
+  let calcScountOver = ((ticketPrice * 40) / 100 );
+  let ticketOver = ticketPrice - calcScountOver;
+  console.log(ticketOver);
+}
