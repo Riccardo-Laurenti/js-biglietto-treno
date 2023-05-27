@@ -18,21 +18,25 @@ console.log(userAge);
 // Prezzo totale del viaggio per persone tra i 19 e 64 anni
 // 0.21€ al km
 
-let ticketPrice = userKm * 0.21;
-console.log(ticketPrice);
 
 // APPLICO SCONTO
 // SCONTO 20% minorenni
 // SCONTO 40% over 65
 
 if (userAge <= 18) {
+  let ticketPrice = userKm * 0.21;
   let calcScountUnder = ((ticketPrice * 20) / 100 );
   let ticketUnder = ticketPrice - calcScountUnder;
   console.log(ticketUnder);
 } 
 else if (userAge >= 65) {
+  let ticketPrice = userKm * 0.21;
   let calcScountOver = ((ticketPrice * 40) / 100 );
   let ticketOver = ticketPrice - calcScountOver;
   console.log(ticketOver);
 }
 
+else if (userAge>=18 && userAge<=65) {
+  let ticketPrice = userKm * 0.21;
+  console.log(ticketPrice);
+}
