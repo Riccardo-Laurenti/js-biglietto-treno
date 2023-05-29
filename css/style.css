@@ -1,0 +1,11 @@
+.my-d-fl {
+    display: flex;
+}
+
+.my-padd {
+    margin-right: 40px;
+}
+
+input, button {
+    margin-top: 10px;
+}

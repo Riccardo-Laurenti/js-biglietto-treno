@@ -40,3 +40,6 @@ else if (userAge>=18 && userAge<=65) {
   let ticketPrice = userKm * 0.21;
   console.log(ticketPrice);
 }
+
+
+// ESERCIZIO 2 JS BIGLIETTO -TRENO -FORM :
