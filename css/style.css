@@ -66,6 +66,11 @@ body {
     margin: 20px;
 }
 
+.grey {
+    background: grey;
+    padding: 0 10px;
+}
+
 
 .data-top {
     margin: 0 30px;
