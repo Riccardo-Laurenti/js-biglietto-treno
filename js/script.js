@@ -8,11 +8,11 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 
 
 // Quanti chilometri vuoi percorrere?
-let userKm = parseInt(prompt('Quanto è lungo il tuo viaggio in km?'));
+let userKm = parseInt('Quanto è lungo il tuo viaggio in km?');
 console.log(userKm);
 
 // Età del passeggero?
-let userAge = parseInt(prompt('Quanti anni hai?'));
+let userAge = parseInt('Quanti anni hai?');
 console.log(userAge);
 
 // Prezzo totale del viaggio per persone tra i 19 e 64 anni
@@ -43,3 +43,11 @@ else if (userAge>=18 && userAge<=65) {
 
 
 // ESERCIZIO 2 JS BIGLIETTO -TRENO -FORM :
+
+
+// Il programma dovrà chiedere all’utente il numero di chilometri che vuole
+// percorrere e l’età del passeggero.
+// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio.
+// Il prezzo del biglietto è definito in base ai km (0.21 € al km), ma va applicato uno sconto del 20% per i minorenni e del 40% per gli over 65.
+
+
