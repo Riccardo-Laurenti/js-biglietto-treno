@@ -19,7 +19,7 @@ console.log(userAge);
 // 0.21€ al km
 
 
-// APPLICO SCONTO
+// APPLICO SCONTO - 
 // SCONTO 20% minorenni
 // SCONTO 40% over 65
 
