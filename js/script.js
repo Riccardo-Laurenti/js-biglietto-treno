@@ -4,94 +4,52 @@
 // ESERCIZIO 2 JS BIGLIETTO -TRENO -FORM :
 
 
-<<<<<<< HEAD
+
 // APPLICO SCONTO - 
 // SCONTO 20% minorenni
 // SCONTO 40% over 65
-=======
 // Il programma dovrà chiedere all’utente il numero di chilometri che vuole
 // percorrere e l’età del passeggero.
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio.
 // Il prezzo del biglietto è definito in base ai km (0.21 € al km), ma va applicato uno sconto del 20% per i minorenni e del 40% per gli over 65.
->>>>>>> 58db3560ff46ff2c235044445f78f99cd4c5419a
 
 
-// evento al click del pulsante Genera
+
+// Quanti chilometri vuoi percorrere?
+let userKm = parseInt(prompt('Quanto è lungo il tuo viaggio in km?'));
+console.log(userKm);
 
 
-var btnGenerate = document.getElementById("generate");
-btnGenerate.addEventListener("click",
-    
-    function () {
-        var passengerName = document.getElementById("name").value;
-        console.log("Generazione nome del passeggero:", passengerName);
+// età passeggero
+let userAge = parseInt(prompt('Quanti anni hai?'));
 
-        var km = document.getElementById("km").value;
-        console.log("Generazione dei km da percorrere:", km);
+console.log(userAge);
 
-        var age = document.getElementById("age").value;
-        console.log("Generazione dell'età:", age);
+// Prezzo totale del viaggio per persone tra i 18 e 64 anni
+// 0.21$ al km
 
-        var ticketPrice = Math.floor(km * 0.21);
-        var discount;
-        var discountType;
-        console.log("Prezzo del biglietto pieno:", ticketPrice);
 
-        // calcolo sconto per età
-        if (age == "minorenne") {
-            discount = ticketPrice * 0.2; 
-            discountType = "Sconto Bronze";
-        } else if (age =="over65") {
-            discount = ticketPrice * 0.4;
-            discountType = "Sconto Silver";
-        } else {
-            discount = 0;
-            discountType = "Biglietto standard";
-        }
 
-        // calcolo prezzo finale
-        var finalPrice = ticketPrice - discount;
-        console.log("Prezzo dello sconto:", discount);
-        console.log("Prezzo del biglietto finale:", finalPrice);
-        console.log("Tipo di sconto:", discountType);
+//Applico sconto
+//Sconto 20% minorenni
+//Sconto 40% over 65
 
-        // creazione dati biglietto in pagina
-        document.getElementById("passenger").innerHTML = passengerName;
-        document.getElementById("discount").innerHTML = discountType;
-        document.getElementById("ticket-price").innerHTML = finalPrice + "€";
+if (userAge <= 18) {
+    let ticketPrice= userKm * 0.21;
+    let calcScountUnder = ((ticketPrice * 20) / 100);
+    let ticketUnder = ticketPrice - calcScountUnder;
+    console.log(ticketUnder);
+}
 
-        var wagonNumber = Math.floor(Math.random() * 9) + 1;
-        console.log("Creazione numero di carrozza:", wagonNumber);
-        document.getElementById("wagon").innerHTML = wagonNumber;
+else if (userAge >= 65) {
+    let ticketPrice = userKm * 0.21;
+    let calcScountOver = ((ticketPrice * 40) / 100);
+    let ticketOver = ticketPrice - calcScountOver;
+    console.log(ticketOver);
+}
 
-        var cpCode = Math.floor(Math.random() * 10000) + 90000;
-        console.log("Creazione numero CP:", cpCode);
-        document.getElementById("cp-code").innerHTML = cpCode;
-        
-        // apparizione sezione ticket
-        document.getElementById("ticket-section").className = "bottom show";
-    }   
- 
-)
+else if (userAge >=18 && userAge <=65) {
+    let ticketPrice = userKm * 0.21;
+    console.log(ticketPrice);
+}
 
-// evento al click del pulsante Annulla
-
-var btnGenerate = document.getElementById("cancel");
-btnGenerate.addEventListener("click",
-    function () {
-        // sparizione parametri ticket
-        document.getElementById("name").value = "";
-        document.getElementById("km").value = "";
-        document.getElementById("age").value = "";
-
-        document.getElementById("passenger").innerHTML = "";
-        document.getElementById("discount").innerHTML = "";
-        document.getElementById("ticket-price").innerHTML = "";
-        document.getElementById("wagon").innerHTML = "";
-        document.getElementById("cp-code").innerHTML = "";
-
-        // sparizione sezione ticket
-        document.getElementById("ticket-section").className = "bottom hidden";
-    }
-
-)
