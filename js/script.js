@@ -15,41 +15,32 @@
 
 
 
-// Quanti chilometri vuoi percorrere?
-let userKm = parseInt(prompt('Quanto è lungo il tuo viaggio in km?'));
-console.log(userKm);
+        var kilometers = parseInt(prompt('Inserisci il numer di km da fare'));
 
+        var age = parseInt(prompt('Inserisci la tua età'));
+        
+        var pricekm = 0.21;
+        
+        var price = kilometers * pricekm;
+        
+        var price20 = price / 100 * 20;
+        
+        var price40 = price / 100 * 40;
+        
+        
+        console.log(kilometers)
+        console.log(age)
+        
+        
+        if (age < 18) {
 
-// età passeggero
-let userAge = parseInt(prompt('Quanti anni hai?'));
+          console.log('Il prezzo è ' + price20.toFixed(2) + '€ con sconto del 20% per under 18');
+        }
+        else if (age > 64) {
 
-console.log(userAge);
+          console.log('Il prezzo è ' + price40.toFixed(2) + ' con sconto del 40% per over 65');
+        }
+        else {
 
-// Prezzo totale del viaggio per persone tra i 18 e 64 anni
-// 0.21$ al km
-
-
-
-//Applico sconto
-//Sconto 20% minorenni
-//Sconto 40% over 65
-
-if (userAge <= 18) {
-    let ticketPrice= userKm * 0.21;
-    let calcScountUnder = ((ticketPrice * 20) / 100);
-    let ticketUnder = ticketPrice - calcScountUnder;
-    console.log(ticketUnder);
-}
-
-else if (userAge >= 65) {
-    let ticketPrice = userKm * 0.21;
-    let calcScountOver = ((ticketPrice * 40) / 100);
-    let ticketOver = ticketPrice - calcScountOver;
-    console.log(ticketOver);
-}
-
-else if (userAge >=18 && userAge <=65) {
-    let ticketPrice = userKm * 0.21;
-    console.log(ticketPrice);
-}
-
+          console.log('Il prezzo è ' + price.toFixed(2));
+        }
