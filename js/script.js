@@ -28,9 +28,9 @@ if (isNaN(askKmUser) || isNaN(userAge)) {
 } else {
 
 
-  const noScountTicket = document.getElementById("no-scount");
+  const noScountTicket = document.getElementById("price-standard");
 
-  const scountPrint = document.getElementById("result");
+  const scountPrint = document.getElementById("with-scount");
 
 
   if (userAge > 18 || userAge < 65) {
