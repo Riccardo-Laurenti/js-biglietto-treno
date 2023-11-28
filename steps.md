@@ -2,16 +2,12 @@
 
 ## 2 CHIEDO ALL'UTENTE LA SUA ETA'
 
-## 3 APPLICO SCONTO DEL 20% PER I MINORENNI
+## 3 CALCOLO BIGLIETTO STANDARD
 
-## 3b APPLICO SCONTO DEL 40% PER Gli over 65
+## 4a APPLICO SCONTO DEL 20% PER I MINORENNI
 
-## 4 Aggiungo evento al click del pulsante Genera
+## 4b APPLICO SCONTO DEL 40% PER Gli over 65
 
-## 5 Calcolo sconto per età
+## 5 Creazione dati del biglietto in pagina HTML
 
-## 6 Calcolo prezzo finale
 
-## 7 Creazione dati biglietto in pagina
-
-## 8 Aggiungo evento al click del pulsante Annulla

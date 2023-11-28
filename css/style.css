@@ -1,0 +1,22 @@
+
+body {
+    background-color:rgb(228, 228, 228);
+    text-align: center;
+}
+
+
+.ticket-container {
+    transform: translateY(80px);
+    margin: auto;
+    width: 23%;
+    padding: 27px;
+    box-shadow: 2px 2px 30px 9px #897676;
+}
+
+
+
+.green-p {
+    font-size: 16px;
+    margin-left: 4px;
+    font-weight: bold;
+}
