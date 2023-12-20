@@ -12,11 +12,6 @@ const priceForKm = 0.21;
 const priceTicketOperation = askKmUser * priceForKm;
 
 
-const scount20 = 0.8;
-
-
-const scount40 = 0.6;
-
 
 const agePrint = document.getElementById("age-print")
 
@@ -51,12 +46,12 @@ if (isNaN(askKmUser) || isNaN(userAge) || askKmUser <= 0 || userAge <= 0) {
   let pricewithScount = false;
 
   if (userAge <= 18) {
-    pricewithScount = priceTicketOperation * scount20;
+    pricewithScount = priceTicketOperation * 0.8;
     scountPrint.innerHTML = `Prezzo biglietto con Sconto del 20%: <span>${pricewithScount.toFixed(2)}€</span>`;
   }
 
   if (userAge >= 65) {
-    pricewithScount = priceTicketOperation * scount40;
+    pricewithScount = priceTicketOperation * 0.6;
     scountPrint.innerHTML = `Prezzo biglietto con Sconto del 40%: <span>${pricewithScount.toFixed(2)}€</span>`;
   }
 
